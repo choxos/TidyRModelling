@@ -1,0 +1,91 @@
+{
+  "name": "r-tidy-modelling",
+  "owner": {
+    "name": "Ahmad Sofi-Mahmudi",
+    "email": "",
+    "url": "https://github.com/choxos"
+  },
+  "metadata": {
+    "description": "Comprehensive R data science and biostatistics agents for tidy modelling workflows with 10 specialized agents, 12 methodology skills, and 7 workflow orchestrators following TMwR and tidyverse best practices",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "r-tidy-modelling",
+      "source": "./plugins/r-tidy-modelling",
+      "description": "Expert agents for R data science and biostatistics covering data wrangling, feature engineering, model building, statistical evaluation, clinical trials, genomics, documentation generation, and reproducible reporting using tidyverse and tidymodels. All agents create new code in output folders - never modifying existing user code.",
+      "version": "1.0.0",
+      "author": {
+        "name": "Ahmad Sofi-Mahmudi",
+        "url": "https://github.com/choxos"
+      },
+      "homepage": "https://github.com/choxos/TidyRModelling",
+      "repository": "https://github.com/choxos/TidyRModelling",
+      "license": "MIT",
+      "keywords": [
+        "R",
+        "tidyverse",
+        "tidymodels",
+        "data-science",
+        "biostatistics",
+        "clinical-trials",
+        "machine-learning",
+        "statistical-modeling",
+        "feature-engineering",
+        "reproducible-research",
+        "ggplot2",
+        "dplyr",
+        "renv",
+        "targets",
+        "quarto",
+        "TMwR",
+        "tidy-data",
+        "survival-analysis",
+        "bayesian-modeling",
+        "epidemiology",
+        "genomics",
+        "bioconductor",
+        "CONSORT",
+        "ICH-E9",
+        "documentation-generation"
+      ],
+      "category": "data-science",
+      "strict": false,
+      "commands": [
+        "./commands/r-analysis.md",
+        "./commands/r-code-review.md",
+        "./commands/r-model-comparison.md",
+        "./commands/r-clinical-analysis.md",
+        "./commands/r-project-setup.md",
+        "./commands/r-doc-generate.md",
+        "./commands/r-tutorial-create.md"
+      ],
+      "agents": [
+        "./agents/r-data-architect.md",
+        "./agents/tidymodels-engineer.md",
+        "./agents/feature-engineer.md",
+        "./agents/biostatistician.md",
+        "./agents/data-wrangler.md",
+        "./agents/viz-specialist.md",
+        "./agents/reporting-engineer.md",
+        "./agents/r-code-reviewer.md",
+        "./agents/r-docs-architect.md",
+        "./agents/r-tutorial-engineer.md"
+      ],
+      "skills": [
+        "./skills/tidymodels-workflow",
+        "./skills/recipes-patterns",
+        "./skills/resampling-strategies",
+        "./skills/model-tuning",
+        "./skills/model-evaluation",
+        "./skills/survival-analysis",
+        "./skills/clinical-trials",
+        "./skills/bayesian-modeling",
+        "./skills/epidemiology-methods",
+        "./skills/genomics-analysis",
+        "./skills/r-documentation-patterns",
+        "./skills/roxygen2-pkgdown"
+      ]
+    }
+  ]
+}

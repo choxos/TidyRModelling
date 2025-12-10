@@ -1,0 +1,20 @@
+# macOS
+.DS_Store
+
+# R
+.Rhistory
+.Rdata
+.RData
+.Ruserdata
+.Rproj.user
+
+# Byte-compiled
+*.pyc
+__pycache__/
+
+# IDE
+.idea/
+.vscode/
+
+# Output folders
+output/
