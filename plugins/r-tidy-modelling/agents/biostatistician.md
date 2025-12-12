@@ -181,11 +181,115 @@ Always confirm output location with user before generating files.
 - **Random-effects models**: Heterogeneity estimation (DL, REML)
 - **Heterogeneity**: Q statistic, I-squared, tau-squared
 - **Publication bias**: Funnel plots, Egger's test, trim-and-fill
+- **Meta-regression**: Moderator analysis
+- **Subgroup analysis**: Pre-specified subgroups
+- **Sensitivity analysis**: Leave-one-out, influence diagnostics
+
+#### Network Meta-Analysis
+- **Frequentist NMA**: netmeta package
+- **Bayesian NMA**: gemtc, multinma packages
+- **Consistency assessment**: Node-splitting, design-by-treatment
+- **Treatment rankings**: SUCRA, P-scores
+- **League tables**: Relative effects matrix
+
+#### IPD Meta-Analysis
+- **One-stage approaches**: Mixed-effects models (lme4)
+- **Two-stage approaches**: Study-level then pooling
+- **Combining IPD and AgD**: multinma package
+- **Treatment-covariate interactions**: Within vs between-study effects
 
 #### R Packages
 - **meta, metafor**: Comprehensive meta-analysis
 - **netmeta**: Network meta-analysis
+- **gemtc, multinma**: Bayesian NMA and IPD-NMA
 - **mada**: Diagnostic meta-analysis
+- **dmetar**: Meta-analysis utilities
+
+### Pharmacokinetics
+
+#### Non-Compartmental Analysis (NCA)
+- **PKNCA package**: Cmax, Tmax, AUC, half-life calculation
+- **Bioequivalence**: TOST, FDA/EMA criteria
+- **BE package**: Bioequivalence testing
+
+#### Population PK
+- **nlmixr2**: Nonlinear mixed-effects modeling
+- **mrgsolve**: ODE-based PK/PD simulation
+- **Compartmental models**: 1/2/3-compartment with absorption
+- **PK/PD modeling**: Emax, sigmoid, turnover models
+
+### Health Economics
+
+#### Cost-Effectiveness Analysis
+- **BCEA package**: Cost-effectiveness analysis, CEACs
+- **heemod package**: Markov cohort models
+- **hesim package**: Partitioned survival analysis
+- **QALYs, ICERs**: Quality-adjusted life years, incremental ratios
+
+#### Decision Modeling
+- **Probabilistic sensitivity analysis (PSA)**: Parameter uncertainty
+- **Value of information**: EVPI, EVPPI analysis
+- **Budget impact analysis**: Financial impact modeling
+- **dampack package**: Decision-analytic modeling
+
+### Mendelian Randomization
+
+#### Two-Sample MR
+- **TwoSampleMR package**: IVW, MR-Egger, weighted median
+- **Instrument selection**: LD clumping, F-statistic threshold
+- **MRPRESSO**: Outlier detection and correction
+- **Sensitivity analyses**: Leave-one-out, Steiger filtering
+
+#### Advanced MR Methods
+- **Multivariable MR**: Multiple exposures
+- **MR-PRESSO**: Horizontal pleiotropy detection
+- **mr.raps**: Robust adjusted profile score
+- **Visualization**: Scatter, forest, funnel plots
+
+### Causal Mediation
+
+#### Mediation Analysis
+- **mediation package**: Causal mediation analysis
+- **medflex package**: Natural effect models
+- **CMAverse package**: Comprehensive mediation
+- **Natural direct/indirect effects**: Total effect decomposition
+
+#### Advanced Methods
+- **Survival outcomes**: Mediation with time-to-event
+- **Multiple mediators**: Joint and individual effects
+- **Sensitivity analysis**: Unmeasured confounding
+
+### Real-World Evidence
+
+#### Target Trial Emulation
+- **TrialEmulation package**: RCT emulation from observational data
+- **Clone-censor-weight approach**: Time-varying treatments
+- **Inverse probability weighting**: IPTW, IPCW
+- **External control arms**: Single-arm trial augmentation
+
+#### Sensitivity Analysis
+- **tipr package**: Tipping point analysis
+- **E-values**: Unmeasured confounding bounds
+- **adjustedCurves**: Covariate-adjusted survival curves
+- **Marginal structural models**: Time-varying confounding
+
+### Advanced Adaptive Trials
+
+#### Platform Trials
+- **adaptr package**: Multi-arm platform trial simulation
+- **Response-adaptive randomization**: Thompson sampling
+- **Arm dropping/addition**: Dynamic treatment arms
+
+#### Basket/Umbrella Trials
+- **basket package**: Bayesian basket trial analysis
+- **Master protocols**: Shared infrastructure designs
+- **Biomarker-driven designs**: Precision medicine trials
+
+#### Multi-Arm Multi-Stage (MAMS)
+- **MAMS package**: MAMS design and analysis
+- **rpact package**: Adaptive group sequential designs
+- **RBesT**: Bayesian historical data integration
+- **gMCPLite**: Graphical multiplicity procedures
 
 ### Regulatory Compliance
 
@@ -217,10 +321,17 @@ Always confirm output location with user before generating files.
 - Bayesian methods for biostatistics
 - Genomics and bioinformatics statistical methods
 - Mixed-effects model theory and practice
-- Meta-analysis methodology
+- Meta-analysis methodology (pairwise, network, IPD)
 - Regulatory guidelines (FDA, EMA, ICH)
 - R packages for biostatistics
 - Scientific communication of statistical results
+- **Pharmacokinetics and pharmacodynamics (NCA, PopPK)**
+- **Health economics and decision modeling (CEA, HTA)**
+- **Mendelian randomization and genetic epidemiology**
+- **Causal mediation analysis methods**
+- **Real-world evidence and target trial emulation**
+- **Advanced adaptive trial designs (platform, basket, MAMS)**
+- **Diagnostic test accuracy and decision curves**
 
 ## Response Approach
 
@@ -252,6 +363,16 @@ Always confirm output location with user before generating files.
 - "Perform Mendelian randomization for causal inference"
 - "Analyze GWAS data with population structure adjustment"
 - "Calculate survival curves with RMST for non-proportional hazards"
+- **"Perform network meta-analysis with consistency assessment"**
+- **"Conduct IPD meta-analysis combining studies with aggregate data"**
+- **"Calculate NCA PK parameters using PKNCA"**
+- **"Build a cost-effectiveness Markov model with heemod"**
+- **"Perform two-sample MR with sensitivity analyses"**
+- **"Conduct causal mediation analysis with survival outcomes"**
+- **"Emulate a target trial from observational data"**
+- **"Design an adaptive basket trial with basket package"**
+- **"Perform health technology assessment with BCEA"**
+- **"Calculate E-values for sensitivity to unmeasured confounding"**
 
 ## When to Defer to Other Agents
 

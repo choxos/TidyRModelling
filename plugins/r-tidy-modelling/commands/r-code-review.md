@@ -34,6 +34,36 @@ Comprehensive code review for R scripts and packages. This command uses the **r-
 - Edge case coverage
 - Mocking practices
 
+### TMwR Review (Tidymodels Workflow Review)
+- **Data Leakage Detection** (CRITICAL)
+  - Recipe fitted on test data (DL-001)
+  - Preprocessing before split (DL-002)
+  - Target encoding without CV (DL-003)
+  - Feature selection using test data (DL-004)
+  - prep() before initial_split() (DL-005)
+- **Resampling Violations** (MAJOR/CRITICAL)
+  - Missing stratified sampling (RS-001)
+  - Evaluating on training data (RS-002)
+  - Tuning without nested CV (RS-003)
+  - Missing random seeds (RS-004)
+  - Validation set reuse (RS-005)
+- **Workflow Issues** (MINOR/MAJOR)
+  - Not using workflows (WF-001)
+  - Inconsistent preprocessing train/test (WF-002)
+  - Not finalizing workflow after tuning (WF-003)
+- **Evaluation Issues** (MAJOR)
+  - Only accuracy for imbalanced data (ME-001)
+  - Wrong metrics for model mode (ME-002)
+  - Missing calibration assessment (ME-003)
+  - Missing confidence intervals (ME-004)
+  - Different resamples for comparison (ME-005)
+- **Reproducibility Issues** (MINOR/MAJOR)
+  - Missing set.seed() (RP-001)
+  - Missing tidymodels_prefer() (RP-002)
+  - Hard-coded paths (RP-003)
+  - Missing renv (RP-004)
+  - Missing session info (RP-005)
+
 ## Usage
 
 ```
@@ -42,7 +72,18 @@ Comprehensive code review for R scripts and packages. This command uses the **r-
 
 ### Parameters
 - `path`: Path to R file, directory, or package (default: current directory)
-- `review_type`: One of `full`, `style`, `performance`, `security`, `tests` (default: full)
+- `review_type`: One of `full`, `style`, `performance`, `security`, `tests`, `tmwr` (default: full)
+
+### Review Types
+
+| Type | Description |
+|------|-------------|
+| `full` | All review types including TMwR |
+| `style` | Tidyverse style guide compliance only |
+| `performance` | Vectorization, memory, speed optimization |
+| `security` | Input validation, credential handling |
+| `tests` | Test coverage and quality |
+| `tmwr` | Tidymodels workflow review (data leakage, resampling, evaluation) |
 
 ## Output Location
 
@@ -78,13 +119,25 @@ output/
    - Well-written code patterns
    - Good practices observed
 
-## Example
+## Examples
 
 ```
 /r-code-review R/ full
 ```
+Performs a comprehensive review of all R files in the R/ directory including TMwR compliance.
 
-This will perform a comprehensive review of all R files in the R/ directory.
+```
+/r-code-review scripts/analysis.R tmwr
+```
+Performs a focused TMwR review for tidymodels workflow anti-patterns.
+
+### TMwR Review Output
+
+TMwR reviews include:
+- **TMwR Compliance Score**: 0-100 based on anti-pattern severity
+- **Issue Findings**: Each with ID, severity, location, description
+- **Before/After Examples**: Remediation code for each issue
+- **Checklist Summary**: Pass/fail for 10-point TMwR compliance checklist
 
 ## Integration with CI/CD
 
